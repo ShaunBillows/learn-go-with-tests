@@ -4,14 +4,14 @@ import "testing"
 
 // Single test example
 
-func TestHello(t *testing.T) {
-	got := Hello("Shaun")
-	want := "Hello, Shaun"
+// func TestHello(t *testing.T) {
+// 	got := Hello("Shaun")
+// 	want := "Hello, Shaun"
 
-	if got != want {
-		t.Errorf("got %q want %q", got, want)
-	}
-}
+// 	if got != want {
+// 		t.Errorf("got %q want %q", got, want)
+// 	}
+// }
 
 // Test with subtests
 
