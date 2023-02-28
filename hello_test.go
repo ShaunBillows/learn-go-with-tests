@@ -19,17 +19,24 @@ func TestHello(t *testing.T) {
 	t.Run("saying hello to people", func(t *testing.T) {
 		got := Hello("Chris")
 		want := "Hello, Chris"
-
-		if got != want {
-			t.Errorf("got %q want %q", got, want)
-		}
+		assertCorrectMessage(t, got, want)
 	})
-	t.Run("say 'Hello, World' when an empty string is supplied", func(t *testing.T) {
+
+	t.Run("empty string defaults to 'world'", func(t *testing.T) {
 		got := Hello("")
 		want := "Hello, World"
-
-		if got != want {
-			t.Errorf("got %q want %q", got, want)
-		}
+		assertCorrectMessage(t, got, want)
 	})
+
+}
+
+// Test helper function 
+
+// Note: testing.TB is an interface testing.T and testing.B support
+
+func assertCorrectMessage(t testing.TB, got, want string) {
+	t.Helper() // tell test suite this is a helper so use function call for text fail line number
+	if got != want {
+		t.Errorf("got %q want %q", got, want)
+	}
 }
