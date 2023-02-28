@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-// Single test example
+// 1. Single test example
 
 // func TestHello(t *testing.T) {
 // 	got := Hello("Shaun")
@@ -13,7 +13,7 @@ import "testing"
 // 	}
 // }
 
-// Test with sub tests
+// 2. Test with sub tests
 
 func TestHello(t *testing.T) {
 	t.Run("saying hello to people", func(t *testing.T) {
