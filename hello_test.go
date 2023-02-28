@@ -32,11 +32,11 @@ func TestHello(t *testing.T) {
 
 // Test helper function 
 
-// Note: testing.TB is an interface testing.T and testing.B support
-
 func assertCorrectMessage(t testing.TB, got, want string) {
 	t.Helper() // tell test suite this is a helper so use function call for text fail line number
 	if got != want {
 		t.Errorf("got %q want %q", got, want)
 	}
 }
+
+// Note: testing.TB is an interface testing.T and testing.B support
