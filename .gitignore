@@ -1,0 +1,5 @@
+*.exe
+*.test
+*.prof
+/bin
+example.com
