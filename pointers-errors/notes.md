@@ -16,6 +16,7 @@
         To identify unchecked errors, the 'errcheck' command can be used.
         Global variables can be created for error messages to reuse in tests.
         Errors are the way to indicate failure when calling a function or method.
+        t.Fatal will stop a test if it called, this prevents making furthur assertions on nil pointers that would result in a panic
 	
 	Nil:
 	
